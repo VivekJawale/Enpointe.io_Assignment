@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
     }, [accessToken])
     const handleLogout = () => {
         localStorage.removeItem("accessToken");
-        useLocation.push("/");
+ < Navigate to "/"/>
         alert('logged out');
     };
 
