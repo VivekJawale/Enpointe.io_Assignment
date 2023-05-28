@@ -3,7 +3,11 @@
 # Banking App
 
 A web application for managing banking transactions.
-## Deployed URl
+
+Both frontend and backend are deployed 
+for backend deployment cyclic.sh is used 
+and for frontend vercel.com  is used.
+## Deployed URL
     https://banking-app-ochre.vercel.app
     
     
@@ -18,6 +22,7 @@ A web application for managing banking transactions.
   - View personal transactions
   - Make new transactions
   - View account balance
+ 
 
 ## Technologies Used
 
