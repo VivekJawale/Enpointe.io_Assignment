@@ -16,7 +16,7 @@ function AllTransactions() {
     try {
       const response = await axios.get(`${url}/api/transaction`, {
         headers: {
-          token: localStorage.getItem("accessToken")
+          token: localStorage.getItem('accessToken')
         }
       });
       setTransactions(response.data.data);
@@ -38,9 +38,15 @@ function AllTransactions() {
         <ul className="transactions-list">
           {transactions.map((transaction) => (
             <li key={transaction._id} className="transaction-item">
-              <p><strong>User ID:</strong> {transaction.user}</p>
-              <p><strong>User's Account Number:</strong> {transaction.AccountNumber}</p>
-              <p><strong>Account Type:</strong> {transaction.accountType}</p>
+              <p>
+                <strong>User ID:</strong> {transaction.user}
+              </p>
+              <p>
+                <strong>User's Account Number:</strong> {transaction.AccountNumber}
+              </p>
+              <p>
+                <strong>Account Type:</strong> {transaction.accountType}
+              </p>
               {/* Add additional transaction details as needed */}
               <table className="transactions-table">
                 <thead>

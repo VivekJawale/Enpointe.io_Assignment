@@ -9,10 +9,16 @@ const SignUp = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    const [error, setError] = useState(""); // State for displaying form validation error
     const navigate = useNavigate();
 
     const handleSignup = async () => {
+        // Form validation
+        if (!username || !email || !password) {
+            setError("All fields are required");
+            return;
+        }
+
         try {
             const response = await axios.post(`${url}/api/signup`, {
                 username,
@@ -20,20 +26,17 @@ const SignUp = () => {
                 password,
             });
 
-            console.log(response);
-
             const accessToken = response.data.token;
 
             axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
 
-            localStorage.setItem("accessToken", accessToken)
-            localStorage.setItem("cusId", response.data.data._id)
+            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("cusId", response.data.data._id);
 
-            navigate("/user-transaction")
-
+            navigate("/user-transaction");
         } catch (error) {
             console.error("Signup failed", error);
-            alert(error.response.data.message)
+            setError(error.response.data.message);
         }
     };
 
@@ -62,11 +65,13 @@ const SignUp = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
+                {error && <p className="error-message">{error}</p>}
+
                 <button type="button" onClick={handleSignup}>
                     Sign Up
                 </button>
                 <button type="button" onClick={() => navigate("/cus-login")}>
-                    Exiting Customer! Login
+                    Existing Customer? Login
                 </button>
             </form>
         </div>
