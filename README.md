@@ -1,28 +1,24 @@
-# Enpointe.io_Assignment
+# Endpoint.io Assignment
 
-# Banking App
+## Banking App
 
 A web application for managing banking transactions.
 
-Both frontend and backend are deployed 
-for backend deployment cyclic.sh is used 
-and for frontend vercel.com  is used.
+Both the frontend and backend are deployed.
+For backend deployment, `cyclic.sh` is used, and for frontend, `vercel.com` is used.
+
 ## Deployed URL
-    https://banking-app-ochre.vercel.app
-    
-    
-## Features  
+[https://banking-app-ochre.vercel.app](https://banking-app-ochre.vercel.app)
+
+## Features
 
 - User authentication (Bankers and Customers)
-
 - Banker functionalities:
   - View all transactions
-
 - Customer functionalities:
   - View personal transactions
   - Make new transactions
   - View account balance
- 
 
 ## Technologies Used
 
@@ -32,9 +28,6 @@ and for frontend vercel.com  is used.
 - CSS3 for styling
 - Node.js and Express.js for the backend
 - MongoDB for the database
-- jsonwebtoken 
-- bcrypt for password hashing 
+- jsonwebtoken for authentication
+- bcrypt for password hashing
 - mongoose for DB connection
-
-
-
