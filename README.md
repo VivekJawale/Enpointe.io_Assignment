@@ -4,7 +4,7 @@
 
 A web application for managing banking transactions.
 ## Deployed URl
-    :https://banking-app-ochre.vercel.app
+    https://banking-app-ochre.vercel.app
     
     
 ## Features  
