@@ -49,6 +49,7 @@ const SignUp = () => {
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    required
                 />
 
                 <label>Email:</label>
@@ -56,6 +57,7 @@ const SignUp = () => {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
 
                 <label>Password:</label>
@@ -63,6 +65,7 @@ const SignUp = () => {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                 />
 
                 {error && <p className="error-message">{error}</p>}

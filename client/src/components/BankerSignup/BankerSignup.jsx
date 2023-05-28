@@ -55,6 +55,7 @@ const BankerSignUp = () => {
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
 
         <label htmlFor="email">Email:</label>
@@ -63,6 +64,7 @@ const BankerSignUp = () => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <label htmlFor="password">Password:</label>
@@ -72,6 +74,7 @@ const BankerSignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onBlur={validatePassword}
+          required
         />
 
         {passwordError && <p className="password-error">{passwordError}</p>}
