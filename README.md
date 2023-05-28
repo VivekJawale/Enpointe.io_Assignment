@@ -3,8 +3,10 @@
 # Banking App
 
 A web application for managing banking transactions.
-## deployes URl
-    :
+## Deployed URl
+    :https://banking-app-ochre.vercel.app
+    
+    
 ## Features  
 
 - User authentication (Bankers and Customers)
