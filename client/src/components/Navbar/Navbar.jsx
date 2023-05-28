@@ -14,7 +14,6 @@ const Navbar = () => {
 
     }, [accessToken])
     const handleLogout = () => {
-        // Perform logout actions here, such as clearing local storage or making API calls
         localStorage.removeItem("accessToken");
         useLocation.push("/");
         alert('logged out');

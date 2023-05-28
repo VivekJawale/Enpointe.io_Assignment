@@ -1,21 +1,56 @@
 .navbar {
-  background-color: #f0f0f0;
-  padding: 10px;
-}
-
-.navbar-logo a {
-  font-weight: bold;
-  font-size: 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.navbar-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.navbar-links a {
-  color: #555;
-  text-decoration: none;
-}
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo a {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-right: 10px;
+  }
+  
+  .navbar-links a {
+    font-size: 18px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #777;
+  }
+  
+  .navbar-logout {
+    font-size: 18px;
+    color: #555;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-logout:hover {
+    color: #777;
+  }
+  
+  .navbar-username {
+    font-size: 18px;
+    color: #333;
+  }
+  
