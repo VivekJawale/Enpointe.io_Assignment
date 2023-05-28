@@ -3,7 +3,7 @@ import axios from "axios";
 import "./signup.css";
 import { useNavigate } from "react-router-dom";
 
-const url = 'http://localhost:8080'
+const url = 'https://blush-barracuda-shoe.cyclic.app';
 
 const SignUp = () => {
     const [username, setUsername] = useState("");

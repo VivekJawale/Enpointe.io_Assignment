@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './AllTransactions.css';
 import axios from 'axios';
 
-const url = 'http://localhost:8080';
+const url = 'https://blush-barracuda-shoe.cyclic.app';
 
 function AllTransactions() {
   const [transactions, setTransactions] = useState([]);

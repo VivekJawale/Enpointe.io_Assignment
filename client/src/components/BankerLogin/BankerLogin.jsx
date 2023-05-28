@@ -3,7 +3,7 @@ import axios from "axios";
 import "./banker-login.css";
 import { useNavigate } from "react-router-dom";
 
-const url = 'http://localhost:8080';
+const url = 'https://blush-barracuda-shoe.cyclic.app';
 
 const BankerLogin = () => {
   const [username, setUsername] = useState("");

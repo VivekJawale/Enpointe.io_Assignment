@@ -4,7 +4,7 @@ import './transactions.css';
 
 
 
-const url = 'http://localhost:8080'
+const url = 'https://blush-barracuda-shoe.cyclic.app';
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
