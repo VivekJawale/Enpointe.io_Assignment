@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import AllRoutes from './AllRoutes';
 import './App.css';
+import AllTransactions from './components/AllTransactions/AllTransactions';
+import BankerLogin from './components/BankerLogin/BankerLogin';
+import BankerSignUp from './components/BankerSignup/BankerSignup';
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login/Login';
+import Transactions from './components/Transaction/Transactions';
+import SignUp from './components/signup/SignUp';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AllRoutes />
     </div>
   );
 }

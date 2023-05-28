@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 app.use('/api', authRouter);
 app.use(AuthMiddleware)
 app.use('/api', transactionRouter)
-
 app.listen(PORT, async () => {
     try {
         await connect();

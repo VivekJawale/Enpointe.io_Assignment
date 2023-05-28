@@ -1,7 +1,6 @@
 const Account = require('../models/Account.model');
 const Transaction = require('../models/Transaction.model');
 
-
 const generateRandomNumber = () => {
     const min = Math.pow(10, 9);
     const max = Math.pow(10, 10) - 1;
@@ -48,12 +47,27 @@ const transactionController = {
 
             account.transactions.push(transaction);
             await account.save();
-            return res.status(200).send("Transaction completed successfully");
+            return res.status(200).send({msg:"Transaction completed successfully",account});
+        } catch (error) {
+            return res.status(400).send({ msg: error.message });
+        }
+    },
+    getAllTransactions:async(req,res)=>{
+        try {
+            const transactions=await Account.find();
+            return res.status(200).send({msg:"All Accounts Transactions",data:transactions});
+        } catch (error) {
+            return res.status(400).send({ msg: error.message });
+        }
+    },
+    getTransactionsOfUser:async(req,res)=>{
+        try {
+            const transactions=await Account.find({user:req.user._id});
+            return res.status(200).send({msg:"All Accounts Transactions of user",data:transactions});
         } catch (error) {
             return res.status(400).send({ msg: error.message });
         }
     }
-
 }
 
 module.exports = transactionController;
